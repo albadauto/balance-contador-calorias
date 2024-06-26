@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Balance</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Balance.styles.css" asp-append-version="true" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-slate-900">
+    
+    <div class=" min-h-max text-white">
+        <div class="flex flex-center justify-center space-x-2 mb-10">
+            <a class="text-white text-3xl hover:bg-gray-100 transition-all cursor-pointer no-underline p-2 rounded" href="#">Home</a>
+            <a class="text-white text-3xl hover:bg-gray-100 transition-all cursor-pointer no-underline p-2 rounded">Sobre</a>
+        </div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
